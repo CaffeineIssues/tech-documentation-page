@@ -1,0 +1,1 @@
+Responsive Tech Documentation Page made for FreeCodeCamp's responsive webdesign Fourth challenge.
