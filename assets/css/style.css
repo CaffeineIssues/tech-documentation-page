@@ -1,4 +1,4 @@
-.sidenav {
+.navbar {
     height: 100%;
     width: 160px;
     position: fixed;
@@ -10,7 +10,7 @@
     padding-top: 20px;
 }
   
-.sidenav a {
+.navbar a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 25px;
@@ -18,7 +18,7 @@
     display: block;
 }
   
-.sidenav a:hover {
+.navbar a:hover {
     color: #f1f1f1;
 }
   
@@ -60,6 +60,6 @@ b{
     cursor:pointer;
 }
 @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+    .navbar {padding-top: 15px;}
+    .navbar a {font-size: 18px;}
   }
