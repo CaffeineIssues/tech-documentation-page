@@ -1,67 +1,117 @@
 <html>
     <head>
-        <title>Ruby On Rails Documentation</title>
-        <link rel="stylesheet" src="assets/css/style.css" />
+        <title>Ruby On Rails Installation Guide</title>
+        <link rel="stylesheet" href="assets/css/style.css" />
     </head>
     <body>
+        <nav> id="navbar"
+            <!-- Side navigation -->
+            <div class="sidenav">
+                <header>
+                    <span>Get Started With Rails</span>
+                </header>
+                <a href="#What_Is_Ruby_on_Rails?">About Rails</a>
+                <a href="#Prerequisites">Prerequesites</a>
+                <a href="#Installing_Ruby">Installing Ruby</a>
+                <a href="#Installing_SQLite3">Installing SQLite 3</a>
+                <a href="#Installing_Node.JS_And_Yarn">Installing Node.JS and Yarn</a>
+                <a href="#Installing_Rails">Installing Rails</a>
+                <a href="#Conclusion">Conclusion</a>
+            </div>
+        </nav>
         <main id="main-doc">
-            <section id="TITLE_1" class="main-section">
+            <section id="What_Is_Ruby_on_Rails?" class="main-section">
                 <header>
                     <h1>What Is Ruby on Rails?</h1>
                 </header>
+                <p>Rails is a web application development framework written in the Ruby programming language. It is designed to make programming web applications easier by making assumptions about what every developer needs to get started. It allows you to write less code while accomplishing more than many other languages and frameworks. Experienced Rails developers also report that it makes web application development more fun.</p>
+                <p>Rails is opinionated software. It makes the assumption that there is a "best" way to do things, and it's designed to encourage that way - and in some cases to discourage alternatives. If you learn "The Rails Way" you'll probably discover a tremendous increase in productivity. If you persist in bringing old habits from other languages to your Rails development, and trying to use patterns you learned elsewhere, you may have a less happy experience.</p>
+                <p>The Rails philosophy includes two major guiding principles:</p>
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li><b>Don't Repeat Yourself:</b> DRY is a principle of software development which states that "Every piece of knowledge must have a single, unambiguous, authoritative representation within a system". By not writing the same information over and over again, our code is more maintainable, more extensible, and less buggy.</li>
+                    <li><b>Convention Over Configuration:</b> Rails has opinions about the best way to do many things in a web application, and defaults to this set of conventions, rather than require that you specify minutiae through endless configuration files.</li>
                 </ul>
             </section>
-            <section id="TITLE_2" class="main-section">
+            <section id="Prerequisites" class="main-section">
                 <header>
-                    <h1>TITLE 2</h1>
-                    
+                    <h1>Prerequisites</h1>
                 </header>
-                <p></p>
-                <p></p>
-                <p></p>
-                <code>
-                    
-                </code>
+                <p>The best way to read this guide is to follow it step by step. All steps are essential to run this example application and no additional code or steps are needed.</p>
+                <p>By following along with this guide, you'll create a Rails project called blog, a (very) simple weblog. Before you can start building the application, you need to make sure that you have Rails itself installed.</p>
+                <p>Before you install Rails, you should check to make sure that your system has the proper prerequisites installed. These include:</p>
+                <ul>
+                    <li>Ruby</li>
+                    <li>SQLite3</li>
+                    <li>Node.JS</li>
+                    <li>Yarn</li>
+                </ul>
+                
             </section>
-            <section id="TITLE_3" class="main-section">
+            <section id="Installing_Ruby" class="main-section">
                 <header>
-                    <h1>TITLE 3</h1>
-                    
+                    <h1>Installing Ruby</h1>
                 </header>
-                <p></p>
-                <p></p>
-                <p></p>
+                <p>Open up a command line prompt. On macOS open Terminal.app; on Windows choose "Run" from your Start menu and type cmd.exe. Any commands prefaced with a dollar sign $ should be run in the command line. Verify that you have a current version of Ruby installed:</p>
                 <code>
-                    
+                   $ ruby --version
                 </code>
-                                
-            </section>
-            <section id="TITLE_4" class="main-section">
-                <header>
-                    <h1>TITLE 4</h1>
-                    
-                </header>
-                <p></p>
-                <code>
-                    
-                </code>
-                                
-            </section>
-            <section id="TITLE_5" class="main-section">
-                <header>
-                    <h1>TITLE 5</h1>
+                <p>Rails requires Ruby version 2.7.0 or later. It is preferred to use latest Ruby version. If the version number returned is less than that number (such as 2.3.7, or 1.8.7), you'll need to install a fresh copy of Ruby.</p>
+                <p>To install Rails on Windows, you'll first need to install <a href="https://rubyinstaller.org/">Ruby Installer</a>.</p>
+                <p>For more installation methods for most Operating Systems take a look at <a href="https://www.ruby-lang.org/en/documentation/installation/">ruby-lang.org</a>.</p>
                    
-                </header>
-                <p></p>
-                <code>
+            </section>
+            <section id="Installing_SQLite3" class="main-section">
+                <header>
+                    <h1>Installing SQLite3</h1>
                     
-                </code>               
+                </header>
+                <p>You will also need an installation of the SQLite3 database. Many popular UNIX-like OSes ship with an acceptable version of SQLite3. Others can find installation instructions at the <a href="https://www.sqlite.org/index.html">SQLite3 website</a>.</p>
+                <p>Verify that it is correctly installed and in your load PATH:</p>
+                <code>
+                    $ sqlite3 --version
+                </code>
+                <p>The program should report its version.</p>           
+            </section>
+            <section id="Installing_Node.JS_And_Yarn" class="main-section">
+                <header>
+                    <h1>Installing Node.js and Yarn</h1>
+                </header>
+                <p>Finally, you'll need Node.js and Yarn installed to manage your application's JavaScript.</p>
+                <p>Find the installation instructions at the <a href="https://nodejs.org/en/download/">Node.js</a> website and verify it's installed correctly with the following command:</p>
+                <code>
+                    $ node --version
+                </code>   
+                <p>The version of your Node.js runtime should be printed out. Make sure it's greater than 8.16.0.</p>           
+                <p>To install Yarn, follow the installation instructions at the <a href="https://classic.yarnpkg.com/en/docs/install#windows-stable">Yarn website</a>.</p> 
+                <p>If it says something like "1.22.0", Yarn has been installed correctly.</p>
+            </section>
+            <section id="Installing_Rails" class="main-section">
+                <header>
+                    <h1>Installing Rails</h1>
+                </header>
+                <p>To install Rails, use the gem install command provided by RubyGems:</p>
+                <code>
+                    $ gem install rails
+                </code>   
+                <p>To verify that you have everything installed correctly, you should be able to run the following in a new terminal:</p>           
+                <code>
+                    $ rails --version
+                </code>   
+                <p>If it says something like "Rails 7.0.0", you are ready to continue.</p> 
+                
+            </section>
+            <section id="Conclusion" class="main-section">
+                <header>
+                    <h1>Conclusion</h1>
+                </header>
+                <p>If everything was installed correctly you should be able to start using rails</p>
+                <p>Rails is an amazing and fun language and with dedication you'll be able to build great things!!</p>           
+                <p>Subscribe to our newsletter if you're interested in getting a weekly guide on how to use rails</p>
+                <div style="text-align:center;"><p><label for="subscribe">
+                    <input type="email" id="subscribe" name="subscribe" placeholder="your email here"/>
+                </label>
+                <input type="submit" value="subscribe" class="button"/></div>
+                </p>
             </section>
         </main>
     </body>
